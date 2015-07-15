@@ -1,10 +1,10 @@
 # Composer Tools
 
 A collection of PHP command-line tools with a global installer for Linux systems.
-Allows you to run PHP related commands by referencing binary without path:
-`phpunit` instead of `./path/to/my/project/vendor/bin/phpunit`. Accessible to every user on system.
+Allows you to run PHP related commands by referencing binary without path.
+For example, instead of `./path/to/my/project/vendor/bin/phpunit` you can simply type `phpunit`. The commands would be accessible to every user on system.
 
-See what's included at the end of this document. We provide sample communication with most frequent comamnds.
+See what tools are included at the end of this document. We provide sample communication with most frequent comamnds.
 
 # How to install
 
@@ -24,14 +24,14 @@ sudo git clone https://github.com/dvershinin/composer-tools.git
 sudo ./composer-tools/install.sh
 ```
 
-What it does: checks out this repostiry, creates symbolic links to binaries of PHP tools under /usr/local/bin/.
+What it does: checks out this repostiry, creates symbolic links to binaries of PHP tools under */usr/local/bin/*.
 Normally,this location is in PATH, so you are ready to run PHP commands.
 
 # Update PHP tools
 
 Easy update all via one command:
 
-```
+```bash
 cd /usr/local/src/composer-tools && sudo git pull && sudo bash ./install.sh
 ```
 
@@ -47,7 +47,11 @@ cd /usr/local/src/composer-tools && sudo git pull && sudo bash ./install.sh
   * `phptags --close --long --tokenizer *.php` adds close tags, converts open tags into long form <?php and uses the more reliable --tokenizer mode (instead of --regex)
   * `phptags --unclosed --shortall dir/ ../*.tpl` includes/ converts all tags into short forms, and strips close tags of a document (it's advised to rather have whitespace issues fixed than keep using the newcomer workaround)
   * See also `--help` for the complete reference.
+* [PHP Loc](https://github.com/sebastianbergmann/phploc)  quickly measures the size and analyzes the structure of a PHP project
+  * `phploc /path/to/source`
+* [PHP Mess Dector](http://phpmd.org/documentation/index.html) - takes a given PHP source code base and look for several potential problems within that source
+  * `phpmd /path/to/source text unusedcode,naming`
 
 # F.A.Q.
   * Why not use `compose global require`? Why store binaries under /usr/local/bin/
-  - Simple: if you install packages using "composer global require", then only single user will have access to the tool binaries. You might want to provide access to all system users (i.e. simple automatic deployment from git might need to run "phinx migrate" using website's user). Thus the best location for tool binaries is /usr/local/bin.
+    * Simple: if you install packages using "composer global require", then only single user will have access to the tool binaries. You might want to provide access to all system users (i.e. simple automatic deployment from git might need to run `phinx migrate` using website's user). Thus the best location for tool binaries is */usr/local/bin*.
