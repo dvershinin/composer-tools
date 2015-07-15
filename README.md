@@ -28,5 +28,5 @@ Normally,this location is in PATH, so you are ready to run PHP commands.
 Easy update all via one command:
 
 ```
-cd /usr/local/src/composer-tools && git pull && composer update
+cd /usr/local/src/composer-tools && git pull && ./install.sh
 ```
