@@ -17,7 +17,7 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 ## Fetch Composer tools
 
 ```
-cd /usr/local/src && git clone https://github.com/dvershinin/composer-tools.git && ./composer-tools/install.sh
+cd /usr/local/src && sudo git clone https://github.com/dvershinin/composer-tools.git && sudo ./composer-tools/install.sh
 ```
 
 What it does: checks out this repostiry, creates symbolic links to binaries of PHP tools under /usr/local/bin/.
@@ -28,5 +28,5 @@ Normally,this location is in PATH, so you are ready to run PHP commands.
 Easy update all via one command:
 
 ```
-cd /usr/local/src/composer-tools && git pull && ./install.sh
+cd /usr/local/src/composer-tools && sudo git pull && sudo bash ./install.sh
 ```
