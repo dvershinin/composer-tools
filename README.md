@@ -4,6 +4,14 @@ A collection of PHP command-line tools with a global installer for Linux systems
 Allows you to run PHP related commands by referencing binary without path:
 phpunit instead of ./path/to/my/project/vendor/bin/phpunit
 
+# Included tools (links to documentation)
+
+* [PHPUnit](https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html) - unit testing
+* [Phinx](http://docs.phinx.org/) - database versioning
+* [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer/wiki) detects violations of a defined coding standard
+
+
+
 # How to install
 
 ## Prerequisite
@@ -17,7 +25,9 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 ## Fetch Composer tools
 
 ```
-cd /usr/local/src && sudo git clone https://github.com/dvershinin/composer-tools.git && sudo ./composer-tools/install.sh
+cd /usr/local/src
+sudo git clone https://github.com/dvershinin/composer-tools.git
+sudo ./composer-tools/install.sh
 ```
 
 What it does: checks out this repostiry, creates symbolic links to binaries of PHP tools under /usr/local/bin/.
