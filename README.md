@@ -53,5 +53,5 @@ cd /usr/local/src/composer-tools && sudo git pull && sudo bash ./install.sh
   * `phpmd /path/to/source text unusedcode,naming`
 
 # F.A.Q.
-  * Why not use `compose global require`? Why store binaries under /usr/local/bin/
+  * Why not use `compose global require`? Why store binaries under */usr/local/bin/* ?
     * Simple: if you install packages using "composer global require", then only single user will have access to the tool binaries. You might want to provide access to all system users (i.e. simple automatic deployment from git might need to run `phinx migrate` using website's user). Thus the best location for tool binaries is */usr/local/bin*.
