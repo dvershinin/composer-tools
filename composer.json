@@ -4,6 +4,7 @@
         "robmorgan/phinx": "*",
         "squizlabs/php_codesniffer": "2.*",
         "phploc/phploc": "*",
-        "phpmd/phpmd" : "@stable"
+        "phpmd/phpmd" : "@stable",
+        "phpdocumentor/phpdocumentor": "2.*"
     }
 }
